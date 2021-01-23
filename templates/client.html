@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+    <img class="index-img" src="{{url_for('static', filename='graphics/client.jpg')}}" alt="image"/>
+    <h2> Client Area </h2>
+
+    <form class="form-style" action="http://127.0.0.1:5000/updateProfile" method="post" enctype="multipart/form-data">
+        <ul>
+            <li>welcome {{username}}</li>
+        <li>
+            <label >username:</label>
+            <input class="field-style field-half" type="text" name="old_username" />
+        </li>
+        <li>
+            <label >Full Password:</label>
+            <input class="field-style field-half"  type="password" name="old_pass" />
+        </li>
+        
+        <li>
+            <label >new username:</label>
+            <input class="field-style field-half" type="text" name="new_username" />
+        </li>
+        <li>
+            <label >new Full Password:</label>
+            <input class="field-style field-half"  type="password" name="new_pass" />
+        </li>
+
+
+        <li>
+        <input type="submit" name="submit" value="update"/>
+        </li>
+        </ul>
+
+    </form>
+
+</section>
+{% endblock %}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Flask Blog</title>
+    {% endif %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <label for="r-button" class="nav-icon" >
+            <i>.</i>
+        </label>
+        <div class="top-header search">
+            <div class="image-logo">c</div>
+            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search.." name="search2">
+        </div>
+        <div class="main-header">
+            <nav>
+                <input type="checkbox" id="r-button" />
+                <ul >
+                    <li>  <a class="link" href="/">Home</a>  </li>
+                    <li>  <a class="link" href="/services">Services</a>  </li>
+                    <li>  <a class="link" href="/client">Client</a>  </li>
+                    <li>  <a class="link" href="/order">Order</a>  </li>
+
+                    {% if session['loggedIn'] %}
+                    <li>  <a class="link" href="/logout">Logout</a></li>
+                    {% else %}
+                    <li>  <a class="link" href="/register">Register</a></li>
+                    {% endif %}
+                    
+                    
+                    
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+{% block content %} {% endblock %}
+
+<footer class="footer-setting">
+    <div class="footer-left">
+        <h1 class="footer-image" > . </h1>
+        <p class="footer-links">
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/client.">Client</a>
+            <a href="/order">Order</a>
+        </p>
+        <p >techglobe &copy; 2019</p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p>Islamadbad</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="">mubashar@gmail.com</a></p>
+        </div>
+
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Social Media</span>
+        </p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>

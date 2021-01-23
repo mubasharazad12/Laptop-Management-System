@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <section>
+        <img class="index-img" src="{{url_for('static', filename='graphics/index.jpg')}}" alt="image"/>
+
+        <h2>FEATURED PRODUCTS</h2>
+        <div class="products">
+            <a href="{{url_for('lenovo_service_page')}}">  <img src="{{url_for('static', filename='graphics/lenovo.jpg')}}" alt="image"> </a>
+        </div>
+        <div class="products" >
+            <a href="{{url_for('dell_service_page')}}">    <img src="{{url_for('static', filename='graphics/dell.png')}}" alt="image"> </a>
+        </div>
+        <div class="products products-setting">
+            <a href="{{url_for('acer_service_page')}}">   <img src="{{url_for('static', filename='graphics/lenovo2.png')}}" alt="image"> </a>
+        </div>
+    </section>
+{% endblock %}

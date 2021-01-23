@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+    
+    <h2> Login </h2>
+
+    <form class="form-style" action="http://127.0.0.1:5000/process_login" method="POST" enctype="multipart/form-data">
+       
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+                {% for message in messages %}
+                        <p> {{message}} </p>
+                {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <ul>
+        <li>
+            <label >username:</label>
+            <input class="field-style field-half" type="text" name="username" />
+        </li>
+        <li>
+            <label >Full Password:</label>
+            <input class="field-style field-half"  type="password" name="pass" />
+        </li>
+        <br>
+        <li>
+        <input type="submit" name="submit" value="Login" />
+        <input type="submit" name="submit" value="Register" />
+        </li>
+        
+        </ul>
+    </form>
+    
+<br>
+<br>
+<br><br>
+</section>
+{% endblock %}

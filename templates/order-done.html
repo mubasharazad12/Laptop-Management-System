@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+    <h2>
+        Thanks for shopping with us online!
+    </h2>
+    <form class="form-style" action="http://localhost:5000/order" method="post" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <label >Name :{{name}} </label>
+            </li>
+            <li>
+                <label >Email address: {{email}} </label>
+            </li>
+            <li>
+                <label >Phone Number: {{phone}} </label>
+            </li>
+            <li>
+                <label >Billing Address: {{address}} </label>
+            </li>
+            <li>
+                <label >Country: {{country}} </label>
+            </li>
+            <li>
+                <label >State: {{state}} </label>
+            </li>
+            <li>
+                <label >Postal Code: {{postalcode}} </label>
+            </li>
+            <li>
+                <label class='highlight' >Product: {{product}} </label>
+            </li>
+            <li>
+                
+                
+                
+            </li>
+            <li>
+                <h2>
+                    Your order has been successfully processed against order id is #1036578
+                </h2>
+            </li>
+            <li>
+                <input type="submit" value="Back" />
+            </li>
+        </ul>
+    </form>
+</section>
+
+{% endblock %}

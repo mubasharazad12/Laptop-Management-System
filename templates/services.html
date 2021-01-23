@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <section>
+
+        <h2>FEATURED PRODUCTS</h2>
+        <div class="products">
+            <a href="{{url_for('lenovo_service_page')}}">  <img src="{{url_for('static', filename='graphics/lenovo.jpg')}}" alt="image"> </a>
+            <h3>Lenovo</h3>
+        </div>
+        <div class="products" >
+            <a href="{{url_for('dell_service_page')}}">    <img src="{{url_for('static', filename='graphics/dell.png')}}" alt="image"> </a>
+            <h3>Dell</h3>
+        </div>
+        <div class="products products-setting">
+            <a href="{{url_for('acer_service_page')}}">   <img src="{{url_for('static', filename='graphics/lenovo2.png')}}" alt="image"> </a>
+            <h3>Acer</h3>
+        </div>
+    </section>
+
+{% endblock %}
+
